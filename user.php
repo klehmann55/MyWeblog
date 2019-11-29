@@ -74,7 +74,7 @@ if ( $register ) {
 			if( isset($_POST['remember']) ) {
 				setcookie('remember', $uname, time()+3600);
 			}
-			header('Location: aktuelles.php');
+			header('Location: news.php');
 			exit;
 		} else {
 			$back = true;

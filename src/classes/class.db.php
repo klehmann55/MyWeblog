@@ -9,7 +9,7 @@ class Db{
 	
 	function __construct($dbms, $host, $port, $dbname, $username, $password) {
 		$this -> options = [ PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-												 PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL ];
+							 PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL ];
 		$this -> db = new PDO($dbms . ':host=' . $host
 										. ';port=' . $port
 										. ';dbname=' . $dbname,

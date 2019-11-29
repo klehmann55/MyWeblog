@@ -3,7 +3,7 @@
 <?php
 session_start();
 if( isset($_COOKIE['remember']) ) {
-	header('Location: aktuelles.php');
+	header('Location: news.php');
 	exit;
 }
 ?>
@@ -35,23 +35,25 @@ if( isset($_COOKIE['remember']) ) {
 		<nav id="topnav">
 			<ul>
 				<li>
-					<a href="index.php" title="Home" id="ahome">Home</a>
+					<a href="index.php" title="Home" id="ahome" class="active">Home</a>
 				</li>			
 				<li>
 					<a href="#"
 				       title="Register"
-							 id="aregisterform"
-							 onclick="document.getElementById('modal').style.display='block';
-									  document.getElementById('registerform').style.display='block'; 
-										return false;">Register</a>
+					   id="aregisterform"
+					   class="right"
+					   onclick="document.getElementById('modal').style.display='block';
+								document.getElementById('registerform').style.display='block'; 
+								return false;">Register</a>
 				</li>
 				<li>
 					<a href="#"
 				       title="Login"
-							 id="aloginform"
-							 onclick="document.getElementById('modal').style.display='block';
-									  document.getElementById('loginform').style.display='block'; 
-										return false;">Login</a>
+					   id="aloginform"
+					   class="right"
+					   onclick="document.getElementById('modal').style.display='block';
+								document.getElementById('loginform').style.display='block'; 
+								return false;">Login</a>
 				</li>
 			</ul>
 		</nav>

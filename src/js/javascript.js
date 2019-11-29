@@ -11,15 +11,15 @@ function start() {
 	
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
-		if (event.target == rform) {
+		if (event.target == rform || event.target == modal) {
 			rform.style.display = "none";
 			modal.style.display = "none";
 		}
-		if (event.target == lform) {
+		if (event.target == lform || event.target == modal) {
 			lform.style.display = "none";
 			modal.style.display = "none";
 		}
-		if (event.target == fform) {
+		if (event.target == fform || event.target == modal) {
 			fform.style.display = "none";
 			modal.style.display = "none";
 		}

@@ -19,136 +19,158 @@
 /* === HTML-TAGS === */
 
 	* {
-		box-sizing: border-box;
+		box-sizing: 		border-box;
 	}
 	
 	body {
-		margin: 0px;
-		font-family: 'Raleway', 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
-		font-size: 16px;
+		margin: 			0px;
+		font-family: 		'Raleway', 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+		font-size: 			16px;
 	}
 
 	h2 {
-		text-align: center;
+		text-align: 		center;
 	}
 
 	section {
-		display: none;
-		animation: myFadeIn 0.75s;
-		/* margin: 3em; */
+		display: 			none;
+		animation: 			myFadeIn 0.75s;
 	}
 	
 
 /* === SINGLE ID'S AND CLASSES === */
-
-	.menu li {
-		padding-right:20px;
-	}
 	
 	.active {
-		background-color: #E5E5E5;
-		height: 100%;
-		padding: 1rem;
-		top: 0;
+		background-color: 	#E5E5E5;
+		height: 			100%;
+		padding: 			1rem;
+		top: 				0;
+	}
+	
+	.main {
+		text-align: 		left;
+		padding-left: 		.5rem;
+		margin-top:			3rem;
+	}
+	.main > h2 {
+		text-align: 		left;
+		padding-left: 		.5rem;
+	}
+	.main > p {
+		text-align: 		left;
+		padding-left: 		.5rem;
+	}
+	
+	.right {
+		right: 				0.5rem;
+		position: 			absolute;
+		top: 				0;
+	}
+	.right#aregisterform {
+		right: 				6rem;
+		position: 			absolute;
+		top: 				0;
+	}
+	.right#account {
+		right: 				6rem;
+		position: 			absolute;
+		top: 				0;
 	}
 
 	#terms {
-		text-align: center;
+		text-align: 		center;
 	}
 	
-	#logout {
-		float: right;
-	}
+
 	
 	/* The "Forgot password" text */
 	span.psw {
-		float: right;
-		padding-top: 16px;
-		padding-left: 10px;
+		float: 				right;
+		padding-top: 		16px;
+		padding-left: 		10px;
 	}
 
 
 /* === NAVIGATION === */
 
 	#topnav {
-		z-index: 0;
-		left: 0;
-		top: 0;
-		position: fixed; /* important for z-index */
-		background-color: #3D3F45;
-		width: 100%;
+		z-index: 			0;
+		left: 				0;
+		top: 				0;
+		position: 			fixed; /* important for z-index */
+		background-color: 	#3D3F45;
+		width: 				100%;
 	}
 
 	#topnav > ul {
-		display: flex;
-		list-style-type: none;
-		padding-left: 0;
+		display: 			flex;
+		list-style-type:	none;
+		padding-left: 		0;
 	}
 
 	#topnav > ul > li {
-		margin-left: .5rem;
+		margin-left: 		.5rem;
 	}
 	
 	#topnav > ul > li > a {
-		color: #FFF;
-		text-decoration: none;
-		padding: 1rem;
+		color: 				#FFF;
+		text-decoration: 	none;
+		padding: 			1rem;
 	}
 	#topnav > ul > li > a:link {
-		color: #FFF;
+		color: 				#FFF;
 	}
 	#topnav > ul > li > a:hover {
-		background-color: #E5E5E5;
-		/* height: 100%; */
-		padding: 1rem;
-		margin: 0;
+		background-color: 	#E5E5E5;
+		padding: 			1rem;
+		margin: 			0;
 	}
 	#topnav > ul > li > a:active {
-		background-color: #E5E5E5;
+		background-color: 	#E5E5E5;
 	}
 	#topnav > ul > li > a:visited {
-		color: #FFF;
+		color: 				#FFF;
 	}
 	
 
 /* === MODAL === */
 
 	#modal {
-		display: none;
-		position: fixed; /* important for z-index */
-		z-index: 1;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		display: 			none;
+		position: 			fixed; /* important for z-index */
+		z-index: 			1;
+		left: 				0;
+		top: 				0;
+		width: 				100%;
+		height: 			100%;
+		overflow: 			auto;
+		background-color: 	rgba(0,0,0,0.4); /* Black w/ opacity */
 	}
 
 	.modal-content {
-		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-		border: 1px solid #888;
-		width: 50%; /* Could be more or less, depending on screen size */
-		z-index: 2;
-		position: relative;
+		margin: 			5% auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 			1px solid #888;
+		width: 				50%; /* Could be more or less, depending on screen size */
+		z-index:			2;
+		position: 			relative;
 	}
 
 /* === CLOSE-MODAL-BUTTON === */
 
 	.close {
 	  /* Position it in the top right corner outside of the modal */
-	  position: absolute;
-	  right: 10px;
-	  top: -10px;
-	  color: #000;
-	  font-size: 3rem;
-	  font-weight: bold;
-	  z-index: 4;
+	  position: 			absolute;
+	  right: 				10px;
+	  top: 					-10px;
+	  color: 				#000;
+	  font-size: 			3rem;
+	  font-weight: 			bold;
+	  z-index: 				4;
 	}
 	.close:hover,
 	.close:focus {
-	  color: red;
-	  cursor: pointer;
+	  color: 				red;
+	  cursor: 				pointer;
 	}
 	
 
@@ -156,10 +178,10 @@
 
 	@keyframes myFadeIn {
 		from {
-			transform: scale(0);
+			transform: 		scale(0);
 		}
 		to {
-			transform: scale(1);
+			transform: 		scale(1);
 		}
 	}
 
@@ -167,104 +189,110 @@
 /* === DIV-CONTAINER === */
  
 	.input-container {
-	  display: flex;
-	  width: 100%;
-	  margin-bottom: 15px;
+	  display: 				flex;
+	  width: 				100%;
+	  margin-bottom: 		15px;
+	}
+	
+	.input-container-account {
+	  display: 				flex;
+	  width: 				20%;
+	  margin-bottom: 		15px;
 	}
 	
 	.container {
-	  padding: 16px;
+	  padding: 				16px;
 	}
 
 	.icon {
-	  padding: 10px;
-	  background: dodgerblue;
-	  color: white;
-	  min-width: 50px;
-	  text-align: center;
+	  padding: 				10px;
+	  background: 			dodgerblue;
+	  color: 				white;
+	  min-width: 			50px;
+	  text-align: 			center;
 	}
 
 
 /* === FORM === */
  
 	form {
-		border: 3px solid #f1f1f1;
-		padding: 1.5em;
-		background-color: beige;
+		border: 			3px solid #f1f1f1;
+		padding: 			1.5em;
+		background-color: 	beige;
 	}
 
 /* === FORM-FIELDS === */
 
 	.input-field {
-	  width: 100%;
-	  padding: 10px;
-	  outline: none;
+	  width: 				100%;
+	  padding: 				10px;
+	  outline: 				none;
 	}
 	
 	.input-field:focus {
-	  border: 2px solid dodgerblue;
+	  border: 				2px solid dodgerblue;
 	}
 
 	#registerform {
-		z-index: 2;
-		position: relative; /* important for z-index */
+		z-index: 			2;
+		position: 			relative; /* important for z-index */
 	}
 	#loginform {
-		z-index: 3;
-		position: relative; /* important for z-index */
+		z-index: 			3;
+		position: 			relative; /* important for z-index */
 	}
 	#forgotform {
-		z-index: 4;
-		position: relative; /* important for z-index */
+		z-index: 			4;
+		position: 			relative; /* important for z-index */
 	}
 
 /* === FORM-BUTTONS === */
 
 	button {
-		color: white;
-	  padding: 14px 20px;
-	  margin: 8px 0;
-	  border: none;
-	  cursor: pointer;
-	  width: 100%;
+		color: 				white;
+		padding: 			14px 20px;
+		margin: 			8px 0;
+		border: 			none;
+		cursor: 			pointer;
+		width: 				100%;
 	}
 	button:hover {
-	  opacity: 0.8;
+	  opacity: 				0.8;
 	}
 	
 	.registerbtn {
-	  background-color: dodgerblue;
-	  color: white;
-	  padding: 15px 20px;
-	  border: none;
-	  cursor: pointer;
-	  width: 100%;
-	  opacity: 0.9;
+		background-color: 	dodgerblue;
+		color: 				white;
+		padding: 			15px 20px;
+		border: 			none;
+		cursor: 			pointer;
+		width: 				100%;
+		opacity: 			0.9;
 	}
 	.registerbtn:hover {
-	  opacity: 1;
+		opacity: 			1;
 	}
 	
 	.loginbtn {
-	  background-color: #4CAF50;
+		background-color: 	#4CAF50;
 	}
 	
 	.cancelbtn {
-	  width: auto;
-	  padding: 10px 18px;
-	  background-color: #f44336;
+		width: 				auto;
+		padding: 			10px 18px;
+		background-color: 	#f44336;
 	}
 
 
 /* === AVATAR === */
  
 	.imgcontainer {
-	  text-align: center;
-	  margin: 24px 0 12px 0;
+	  text-align: 			center;
+	  margin: 				24px 0 12px 0;
 	}
 	img.avatar {
-	  width: 20%;
-	  border-radius: 50%;
+	  width: 				20%;
+	  border-radius: 		50%;
 	}
 
 
@@ -272,11 +300,11 @@
 
 	@media screen and (max-width: 300px) {
 		span#psw {
-			display: block;
-			float: none;
+			display: 		block;
+			float: 			none;
 		}
 		.cancelbtn {
-			width: 100%;
+			width: 			100%;
 		}
 	}
 
