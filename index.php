@@ -23,7 +23,6 @@ if( isset($_COOKIE['remember']) ) {
 		<link rel="stylesheet" type="text/css" href="src/fontawesome/css/all.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
 		<script src="src/js/javascript.js"></script>
-		<script src="src/js/javascript.js"></script>
 		
 	</head>
 	
