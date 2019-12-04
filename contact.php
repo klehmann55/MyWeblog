@@ -1,31 +1,15 @@
-<!-- PHP-SESSION-COOKIE -->
-
-<?php
-session_start();
-if( isset($_COOKIE['remember']) ) {
-	header('Location: blog.php');
-	exit;
-}
-?>
-
-<!-- HTML -->
-
 <!DOCTYPE html>
 <html lang="de">
-
 	<head>
-	
 		<meta charset="UTF-8">
-		<title>My little Weblog</title>
+		<title>Contact Us</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="expires" content="0">
 		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
 		<link rel="stylesheet" type="text/css" href="src/fontawesome/css/all.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
 		<script src="src/js/javascript.js"></script>
-		
 	</head>
-	
 	<body>
 	
 		<div id="modal"></div>
@@ -35,7 +19,7 @@ if( isset($_COOKIE['remember']) ) {
 		<nav id="topnav">
 			<ul>
 				<li>
-					<a href="index.php" title="Home" id="ahome" class="active">Home</a>
+					<a href="index.php" title="Home" id="ahome" class="">Home</a>
 				</li>			
 				<li>
 					<a href="#"
@@ -116,7 +100,7 @@ if( isset($_COOKIE['remember']) ) {
 							name="rpswd-repeat" id="pswd-repeat" pattern=".{8,}" required>
 				</div>
 
-				<p id="terms">By creating an account you agree to our <a href="terms.php" target="_blank">Terms & Privacy</a>.</p>
+				<p id="terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 				
 				<input type="hidden" name="rformname" id="rformname" value="register">
 
@@ -196,12 +180,11 @@ if( isset($_COOKIE['remember']) ) {
 					</button>
 					
 				</div>
-				
 				<p class="psw">Forgot 
-						<a href="#" onclick="document.getElementById('loginform').style.display='none'; 
+					<a href="#" onclick="document.getElementById('loginform').style.display='none'; 
 											 document.getElementById('forgotform').style.display='block';">password?</a>
 				- No account? 
-						<a href="#" onclick="document.getElementById('loginform').style.display='none'; 
+					<a href="#" onclick="document.getElementById('loginform').style.display='none'; 
 											 document.getElementById('registerform').style.display='block';">Sign up</a>!
 				</p>
 				
@@ -231,7 +214,7 @@ if( isset($_COOKIE['remember']) ) {
 					<div style="display:flex;">
 						<span class="fa fa-envelope icon" style="background-color: #4CAF50;"></span>
 							<input class="input-field" type="email" placeholder="E-Mail" 
-								name="femail" id="femail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+								name="femail" id="femail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 								required>
 					</div>
 
@@ -247,13 +230,47 @@ if( isset($_COOKIE['remember']) ) {
 					
 				</div>
 				<p class="psw">Password recovered? 
-						<a href="#" onclick="document.getElementById('forgotform').style.display='none'; 
-											 document.getElementById('loginform').style.display='block';">Sign in</a>.
+					<a href="#" onclick="document.getElementById('forgotform').style.display='none'; 
+										 document.getElementById('loginform').style.display='block';">Sign in</a>!
 				</p>
 				
 			</form>
 			
 		</section>
+		
+		<br>
+		
+<!-- MAIN CONTACT-FORM -->
+
+		<main id="contact-main">
+			<h2>Contact:</h2>
+			<p>You need help or just want to give a feedback?<br>
+			Write us here:</p>
+		
+			<div id="contactform">
+				<form action="mailto:lehmann.kevin@outlook.de" method="post" enctype="text/plain">
+					<p>
+					<label><b>Your E-Mail</b></label><br> 
+					<input class="input-field" type="email" id="contemail" name="contemail"
+					pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+					</p>
+					
+					<p>
+					<label><b>Your Message</b></label><br>
+					<textarea class="input-field" id="text" name="conttext" rows="10" required></textarea>
+					</p>
+					
+					<p>
+					<input type="checkbox" id="check1" name="check1" checked required>
+					<label>I agree with the transfer of my data.</label>
+					</p>
+					
+					<p id="loginbtn">
+					<button class="loginbtn" type="submit">Send E-Mail</button>
+					</p>
+				</form>
+			</div>
+		</main>
 		
 <!-- FOOTER-NAVIGATION -->
 
@@ -265,7 +282,7 @@ if( isset($_COOKIE['remember']) ) {
 				</li>
 				<li>
 					<a href="contact.php" title="Contact" id="contact"
-					   class="">Contact</a>
+					   class="active">Contact</a>
 				</li>
 				<li>
 					<a href="terms.php" title="Terms" id="terms"
@@ -274,67 +291,5 @@ if( isset($_COOKIE['remember']) ) {
 			</ul>
 		</footer>
 		
-<!-- HEADER-BANNER -->
-		
-		<header class="header-banner"></header>
-		
-		<main id="index-main">
-			<h2>Welcome to my little weblog !</h2>
-			<p>
-			If u want to preview the site,<br>
-			login and write a post with the following login-data:
-			</p>
-			<br>
-			<p>
-			username: <b>gast</b><br>
-			password: <b>12345678</b>
-			</p>
-			<br>
-			<p><b>Enjoy!</b></p>
-		</main>
-
-<!-- PHP+JS-ERRORMESSAGE -->		
-
-<?php
-if ( isset($_SESSION['form']) ) { ?>
-
-		<script>
-		
-			var myform = '<?= $_SESSION['form'] ?>';
-			document.getElementById('a' + myform).click();
-			
-			// Diese Verzweigung ist nicht notwendig:
-			// if ( myform == 'registerform' || myform == 'loginform') {
-				
-				<?php
-				if ( isset($_SESSION['errormsg']) ) {
-					
-					foreach ( $_SESSION['errormsg'] as $key => $msg ) { ?>
-					
-						var field = document.getElementById('<?= $key ?>');
-						field.placeholder = '<?= $msg ?>';
-			
-						// document.getElementById('luname').value = $uname;
-						// document.getElementById('lpswd').value = $pswd;
-						/*
-						 * Das Folgende:
-						 *
-						 * field.style.color = 'red';
-						 * field.style.borderColor = 'red';
-						 * field.style.backgroundColor = '#ef7e7e36';
-						 *
-						 * Kann ersetzt werden durch:
-						 */
-						field.setAttribute('style', 'color: red; border-color: red; background-color: #ef7e7e36;');
-						field.focus(); //@todo: Fokus auf das ERSTE 'Fehlerfeld'!
-					<?php }
-				} ?>
-			// }
-			
-		</script>
-		
-<?php } ?>
-
 	</body>
-	
-</html> 
+</html>

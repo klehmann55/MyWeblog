@@ -46,19 +46,44 @@
 		padding: 			1rem;
 		top: 				0;
 	}
+	.active {
+		color:				#3D3F45 !important;
+	}
 	
 	.main {
 		text-align: 		left;
-		padding-left: 		.5rem;
-		margin-top:			3rem;
+		/* padding-left: 		.5rem; */
+		/* margin-top:			3rem;
+		margin-bottom: 		3rem; */
+		z-index:			0;
+		width: 				50%;
+		margin: 			3% auto;
+		border:				2px solid #3D3F45;
 	}
 	.main > h2 {
-		text-align: 		left;
+		text-align: 		center;
 		padding-left: 		.5rem;
 	}
 	.main > p {
 		text-align: 		left;
 		padding-left: 		.5rem;
+	}
+	
+	#index-main {
+		margin-top:			0;
+		text-align:			center;
+		z-index:			0;
+	}
+
+	#contact-main {
+		text-align: 		center;
+		/* padding-left: 		.5rem; */
+		/* margin-top:			3rem;
+		margin-bottom: 		3rem; */
+		z-index:			0;
+		width: 				50%;
+		margin: 			3% auto;
+		border:				2px solid #3D3F45;
 	}
 	
 	.right {
@@ -79,22 +104,36 @@
 
 	#terms {
 		text-align: 		center;
+		margin-bottom: 		0.5rem;
 	}
-	
 
+	label#labelremember {
+		padding-left:			42%;
+	}
 	
 	/* The "Forgot password" text */
-	span.psw {
-		float: 				right;
-		padding-top: 		16px;
-		padding-left: 		10px;
+	p.psw {
+		/* float: 				right; */
+		/* padding-top: 		16px; */
+		/* padding-left: 		10px; */
+		text-align:				center;
+	}
+
+	hr {
+		margin-bottom: 			0;
+	}
+	table {
+		padding:				1rem;
+	}
+	td {
+		padding-right:				1rem;
 	}
 
 
-/* === NAVIGATION === */
+/* === TOP-NAVIGATION === */
 
 	#topnav {
-		z-index: 			0;
+		z-index: 			10;
 		left: 				0;
 		top: 				0;
 		position: 			fixed; /* important for z-index */
@@ -124,14 +163,94 @@
 		background-color: 	#E5E5E5;
 		padding: 			1rem;
 		margin: 			0;
+		color:				#3D3F45;
 	}
 	#topnav > ul > li > a:active {
 		background-color: 	#E5E5E5;
 	}
-	#topnav > ul > li > a:visited {
-		color: 				#FFF;
+	/* #topnav > ul > li > a:visited { */
+		/* color: 				#FFF; */
+	/* } */
+	
+/* === FOOTER-NAVIGATION === */
+
+	#footernav {
+		z-index: 			10;
+		left: 				0;
+		bottom: 			0;
+		position: 			fixed; /* important for z-index */
+		background-color: 	#3D3F45;
+		width: 				100%;
+	}
+
+	#footernav > ul {
+		display: 			flex;
+		list-style-type:	none;
+		padding-left: 		0;
+	}
+
+	#footernav > ul > li {
+		margin-left: 		.5rem;
 	}
 	
+	#footernav > ul > li > a {
+		color: 				#FFF;
+		text-decoration: 	none;
+		padding: 			1rem;
+	}
+	#footernav > ul > li > a:link {
+		color: 				#FFF;
+	}
+	#footernav > ul > li > a:hover {
+		background-color: 	#E5E5E5;
+		padding: 			1rem;
+		margin: 			0;
+		color:				#3D3F45;
+	}
+	#footernav > ul > li > a:active {
+		background-color: 	#E5E5E5;
+	}
+	/* #footernav > ul > li > a:visited { */
+		/* color: 				#FFF; */
+	/* } */
+	
+/* === HEADER-BANNER === */
+	
+	.header-banner {
+		background: url("../images/headerblog.jpg") no-repeat;
+		width: 100%;
+		height: 0;
+			/* 
+			hat keine Auswirkung auf das Bild 
+			und muss ,zur weiteren Bearbeitung, 
+			auf 0 gesetzt werden 
+			*/
+		padding-top: 20.83%; 
+			/* 
+			%-Angabe bei padding-top, 
+			erzeugt das Bild in Abhängigkeit 
+			zur Breite der Seite 
+			*/
+		background-size: contain;
+			/*
+			passt das Hintergrund-Bild
+			an die Größe des Elements an
+			*/
+		margin-top: 50px;
+		position: relative;
+		z-index: 0;
+	}
+
+/*
+Größe des Bildes:
+1920px x 400px
+
+1000px x ????? (208.3px)
+
+Wie viel % von 1920px sind 400px?
+
+400 / 1920 * 100 = 20.83%
+*/
 
 /* === MODAL === */
 
@@ -148,24 +267,34 @@
 	}
 
 	.modal-content {
-		margin: 			5% auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+		margin: 			1% auto auto auto; /* 5% from the top, 15% from the bottom and centered */
 		border: 			1px solid #888;
 		width: 				50%; /* Could be more or less, depending on screen size */
 		z-index:			2;
 		position: 			relative;
 	}
+	.modal-content a,
+	.modal-content a:link, 
+	.modal-content a:visited {
+		color: 				dodgerblue;
+		text-decoration:	none;
+	}
+	.modal-content a:hover {
+		color: 				dodgerblue;
+		text-decoration:	underline;
+	}
 
 /* === CLOSE-MODAL-BUTTON === */
 
 	.close {
-	  /* Position it in the top right corner outside of the modal */
+	  /* Position it in the top right corner of the forms */
 	  position: 			absolute;
 	  right: 				10px;
 	  top: 					-10px;
 	  color: 				#000;
 	  font-size: 			3rem;
 	  font-weight: 			bold;
-	  z-index: 				4;
+	  z-index: 				3;
 	}
 	.close:hover,
 	.close:focus {
@@ -173,6 +302,26 @@
 	  cursor: 				pointer;
 	}
 	
+/* === DELETE-POST-BUTTON === */
+
+	.del-post,
+	.del-post:visited {
+	  /* Position it in the top right corner outside of the modal */
+	  position: 			absolute;
+	  right: 				30em;
+	  /* top: 					-10px; */
+	  color: 				dodgerblue;
+	  font-size: 			1rem;
+	  font-weight: 			bold;
+	  text-decoration:		none;
+	  /* z-index: 				4; */
+	}
+	.del-post:hover,
+	.del-post:focus,
+	.del-post:active {
+	  color: 				red;
+	  cursor: 				pointer;
+	}
 
 /* === ANIMATION === */
 
@@ -189,19 +338,23 @@
 /* === DIV-CONTAINER === */
  
 	.input-container {
-	  display: 				flex;
-	  width: 				100%;
-	  margin-bottom: 		15px;
+		display: 			flex;
+		width: 				100%;
+		margin-bottom: 		15px;
 	}
 	
 	.input-container-account {
-	  display: 				flex;
-	  width: 				20%;
-	  margin-bottom: 		15px;
+	  	/* display: 		flex; */
+	  	width: 				100%;
+	  	/* min-width: 			300px; */
+	  	margin-bottom: 		15px;
 	}
 	
 	.container {
-	  padding: 				16px;
+	  	padding: 			16px;
+	}
+	.container-acc {
+		padding: 			0;
 	}
 
 	.icon {
@@ -216,35 +369,59 @@
 /* === FORM === */
  
 	form {
-		border: 			3px solid #f1f1f1;
+		/* border: 			3px solid #f1f1f1; */
+		/* border: 			3px solid #3D3F45; */
 		padding: 			1.5em;
-		background-color: 	beige;
+		background-color:	#E5E5E5;
 	}
 
 /* === FORM-FIELDS === */
 
 	.input-field {
-	  width: 				100%;
-	  padding: 				10px;
-	  outline: 				none;
-	}
-	
+		width: 				100%;
+		padding: 			10px;
+		outline: 			none;
+	}	
 	.input-field:focus {
-	  border: 				2px solid dodgerblue;
+		border: 			2px solid dodgerblue;
+	}
+
+	.input-field-acc {
+		width: 				100%;
+		padding: 			10px;
+		margin-left:		2rem;
+		outline: 			none;
+		position:			relative;
 	}
 
 	#registerform {
 		z-index: 			2;
-		position: 			relative; /* important for z-index */
+		position: 			absolute; /* important for z-index */
+		width:				100%;
+		min-width:			50rem;
+		height:				80%;
+		margin-top:			2rem;
 	}
 	#loginform {
 		z-index: 			3;
-		position: 			relative; /* important for z-index */
+		position: 			absolute; /* important for z-index */
+		width:				100%;
+		min-width:			50rem;
+		height:				80%;
+		margin-top:			2rem;
 	}
 	#forgotform {
 		z-index: 			4;
-		position: 			relative; /* important for z-index */
+		position: 			absolute; /* important for z-index */
+		width:				100%;
+		min-width:			50rem;
+		height:				80%;
+		margin-top:			2rem;
 	}
+
+	/* #contactform {
+		text-align:			center;
+	} */
 
 /* === FORM-BUTTONS === */
 
@@ -275,12 +452,14 @@
 	
 	.loginbtn {
 		background-color: 	#4CAF50;
+		margin: 			1rem auto;
 	}
 	
 	.cancelbtn {
-		width: 				auto;
-		padding: 			10px 18px;
+		width: 				100%;
+		/* padding: 			10px 18px; */
 		background-color: 	#f44336;
+		/* margin:				auto; */
 	}
 
 
@@ -298,13 +477,32 @@
 
 /* === MEDIA-QUERY over VIEWPORT === */
 
-	@media screen and (max-width: 300px) {
-		span#psw {
+	@media screen and (max-width: 375px) {
+		p.psw {
 			display: 		block;
 			float: 			none;
+			margin-left:	0;
+			text-align:		center;
 		}
 		.cancelbtn {
 			width: 			100%;
+		}
+		.modal-content {
+			/* margin: 			1% auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+			border: 			1px solid #888;
+			width: 				100%; /* Could be more or less, depending on screen size */
+			z-index:			3;
+			position: 			relative;
+		}
+		#registerform {
+			min-width:			0;
+			text-align:			center;
+		}
+		#loginform {
+			min-width:			0;
+		}
+		#forgotform {
+			min-width:			0;
 		}
 	}
 
