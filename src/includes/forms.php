@@ -90,7 +90,7 @@
 								name="rpswd-repeat" id="pswd-repeat" pattern=".{8,}" required>
 					</div>
 
-					<p id="terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+					<p id="terms">By creating an account you agree to our <a href="terms.php" target="_blank">Terms & Privacy</a>.</p>
 					
 					<input type="hidden" name="rformname" id="rformname" value="register">
 

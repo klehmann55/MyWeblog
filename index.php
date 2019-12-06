@@ -58,7 +58,7 @@
 <!-- INDEX-MAIN CONTENT  ======================================================================================== -->
 		
 		<main id="index-main">
-			<h2>Welcome to my little weblog !</h2>
+			<h2>Welcome to my simple weblog !</h2>
 			<p>
 				If u want to preview the site,<br>
 				login and write a post with the following login-data:
