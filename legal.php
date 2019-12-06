@@ -1,5 +1,20 @@
+<?php
+
+// SESSION-START ====================================================================================
+
+	session_start();
+	
+	if( isset($_COOKIE['remember']) ) {
+		header('Location: legalbackend.php');
+		exit;
+	}
+?>
+
+<!-- HTML ====================================================================================================== -->
+
 <!DOCTYPE html>
 <html lang="de">
+
 	<head>
 		<meta charset="UTF-8">
 		<title>Legal Disclosure</title>
@@ -10,11 +25,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
 		<script src="src/js/javascript.js"></script>
 	</head>
+	
 	<body>
+	
+<!-- MODAL ===================================================================================================== -->
 	
 		<div id="modal"></div>
 
-<!-- TOP-NAVIGATION -->
+<!-- TOP-NAVIGATION ============================================================================================ -->
 
 		<nav id="topnav">
 			<ul>
@@ -46,7 +64,7 @@
 			</ul>
 		</nav>
 
-<!-- REGISTER-FORM-SECTION -->
+<!-- REGISTER-FORM-SECTION ============================================================================================ -->
 		
 		<section id="registerform">
 		
@@ -62,49 +80,53 @@
 			</span>
 
 				<h2>Register Form</h2>
-
-				<div class="input-container">
-					<span class="fa fa-user icon"></span>
-						<input class="input-field" type="text" placeholder="Firstname" 
-							name="rfname" id="rfname" required>
-				</div>
-
-				<div class="input-container">
-					<span class="fa fa-user icon"></span>
-						<input class="input-field" type="text" placeholder="Lastname" 
-							name="rlname" id="rlname" required>
-				</div>
-
-				<div class="input-container">
-					<span class="fa fa-user icon"></span>
-						<input class="input-field" type="text" placeholder="Username" 
-							name="runame" id="runame" required>
-				</div>
-
-				<div class="input-container">
-					<i class="fa fa-envelope icon"></i>
-						<input class="input-field" type="text" placeholder="E-Mail" 
-							name="remail" id="remail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
-								required>
-				</div>
-
-				<div class="input-container">
-					<i class="fa fa-key icon"></i>
-						<input class="input-field" type="password" placeholder="Password" 
-							name="rpswd" id="rpswd" pattern=".{8,}" required>
-				</div>
-
-				<div class="input-container">
-					<i class="fa fa-key icon"></i>
-						<input class="input-field" type="password" placeholder="Repeat password" 
-							name="rpswd-repeat" id="pswd-repeat" pattern=".{8,}" required>
-				</div>
-
-				<p id="terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 				
-				<input type="hidden" name="rformname" id="rformname" value="register">
+				<div class="container">
 
-				<button type="submit" class="registerbtn">Register</button>
+					<div class="input-container">
+						<span class="fa fa-user icon"></span>
+							<input class="input-field" type="text" placeholder="Firstname" 
+								   name="rfname" id="rfname" required>
+					</div>
+
+					<div class="input-container">
+						<span class="fa fa-user icon"></span>
+							<input class="input-field" type="text" placeholder="Lastname" 
+								   name="rlname" id="rlname" required>
+					</div>
+
+					<div class="input-container">
+						<span class="fa fa-user icon"></span>
+							<input class="input-field" type="text" placeholder="Username" 
+								   name="runame" id="runame" required>
+					</div>
+
+					<div class="input-container">
+						<i class="fa fa-envelope icon"></i>
+							<input class="input-field" type="text" placeholder="E-Mail" 
+								   name="remail" id="remail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+									required>
+					</div>
+
+					<div class="input-container">
+						<i class="fa fa-key icon"></i>
+							<input class="input-field" type="password" placeholder="Password" 
+								   name="rpswd" id="rpswd" pattern=".{8,}" required>
+					</div>
+
+					<div class="input-container">
+						<i class="fa fa-key icon"></i>
+							<input class="input-field" type="password" placeholder="Repeat password" 
+								   name="rpswd-repeat" id="pswd-repeat" pattern=".{8,}" required>
+					</div>
+
+					<p id="terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+					
+					<input type="hidden" name="rformname" id="rformname" value="register">
+
+					<button type="submit" class="registerbtn">Register</button>
+					
+				</div>
 
 				<div class="container"  style="background-color:#f1f1f1">
 					<button type="button"
@@ -113,17 +135,17 @@
 									 document.getElementById('registerform').style.display='none';">Cancel
 					</button>
 				</div>
+				
 				<p class="psw">Already registered? 
 					<a href="#" onclick="document.getElementById('registerform').style.display='none'; 
-						document.getElementById('loginform').style.display='block';">Sign in</a>!
+										 document.getElementById('loginform').style.display='block';">Sign in</a>!
 				</p>
-
 
 			</form>
 			
 		</section>
 
-<!-- LOGIN-FORM-SECTION -->
+<!-- LOGIN-FORM-SECTION ============================================================================================ -->
 
 		<section id="loginform">
 					
@@ -151,7 +173,7 @@
 					<div style="display:flex;">
 						<span class="fa fa-user icon" style="background-color: #4CAF50;"></span>
 							<input class="input-field" type="text" placeholder="Username" 
-								name="luname" id="luname" required>
+								   name="luname" id="luname" required>
 					</div>
 
 					<label for="lpswd"><b>Password</b></label>
@@ -159,7 +181,7 @@
 					<div style="display:flex;">
 						<span class="fa fa-key icon" style="background-color: #4CAF50;"></span>
 							<input class="input-field" type="password" placeholder="Password" 
-								name="lpswd" id="lpswd" pattern=".{8,}" required>
+								   name="lpswd" id="lpswd" pattern=".{8,}" required>
 					</div>
 
 					<button class="loginbtn" type="submit">Login</button>
@@ -179,7 +201,9 @@
 									 document.getElementById('loginform').style.display='none';">Cancel
 					</button>
 				</div>
-				<p class="psw">Forgot 
+				
+				<p class="psw">
+				Forgot 
 					<a href="#" onclick="document.getElementById('loginform').style.display='none'; 
 										 document.getElementById('forgotform').style.display='block';">password?</a>
 				- No account? 
@@ -192,7 +216,7 @@
 			
 		</section>
 		
-<!-- FORGOT-FORM-SECTION -->
+<!-- FORGOT-FORM-SECTION ============================================================================================ -->
 		
 		<section id="forgotform">
 		
@@ -214,8 +238,8 @@
 					<div style="display:flex;">
 						<span class="fa fa-envelope icon" style="background-color: #4CAF50;"></span>
 							<input class="input-field" type="email" placeholder="E-Mail" 
-								name="femail" id="femail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-								required>
+								   name="femail" id="femail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+								   required>
 					</div>
 
 					<button class="loginbtn" type="submit">Send</button>
@@ -228,6 +252,7 @@
 									 document.getElementById('forgotform').style.display='none';">Cancel
 					</button>
 				</div>
+				
 				<p class="psw">Password recovered? 
 					<a href="#" onclick="document.getElementById('forgotform').style.display='none'; 
 										 document.getElementById('loginform').style.display='block';">Sign in</a>!
@@ -238,6 +263,8 @@
 		</section>
 		
 		<br>
+		
+<!-- MAIN LEGAL-DISCLOSURE  ============================================================================================ -->
 		
 		<main class="main">
 			<h2>Legal Disclosure</h1>
@@ -282,7 +309,7 @@
 			</p>
 		</main>
 		
-<!-- FOOTER-NAVIGATION -->
+<!-- FOOTER-NAVIGATION ============================================================================================ -->
 
 		<footer id="footernav">
 			<ul>			

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 	<head>
 		<meta charset="UTF-8">
 		<title>Terms & Privacy</title>
@@ -10,11 +11,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
 		<script src="src/js/javascript.js"></script>
 	</head>
+	
 	<body>
 	
 		<div id="modal"></div>
 
-<!-- TOP-NAVIGATION -->
+<!-- TOP-NAVIGATION ============================================================================================ -->
 
 		<nav id="topnav">
 			<ul>
@@ -33,7 +35,7 @@
 			</ul>
 		</nav>
 
-<!-- REGISTER-FORM-SECTION -->
+<!-- REGISTER-FORM-SECTION ============================================================================================ -->
 		
 		<section id="registerform">
 		
@@ -53,38 +55,38 @@
 				<div class="input-container">
 					<span class="fa fa-user icon"></span>
 						<input class="input-field" type="text" placeholder="Firstname" 
-							name="rfname" id="rfname" required>
+							   name="rfname" id="rfname" required>
 				</div>
 
 				<div class="input-container">
 					<span class="fa fa-user icon"></span>
 						<input class="input-field" type="text" placeholder="Lastname" 
-							name="rlname" id="rlname" required>
+							   name="rlname" id="rlname" required>
 				</div>
 
 				<div class="input-container">
 					<span class="fa fa-user icon"></span>
 						<input class="input-field" type="text" placeholder="Username" 
-							name="runame" id="runame" required>
+							   name="runame" id="runame" required>
 				</div>
 
 				<div class="input-container">
 					<i class="fa fa-envelope icon"></i>
 						<input class="input-field" type="text" placeholder="E-Mail" 
-							name="remail" id="remail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
-								required>
+							   name="remail" id="remail" pattern ="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+							   required>
 				</div>
 
 				<div class="input-container">
 					<i class="fa fa-key icon"></i>
 						<input class="input-field" type="password" placeholder="Password" 
-							name="rpswd" id="rpswd" pattern=".{8,}" required>
+							   name="rpswd" id="rpswd" pattern=".{8,}" required>
 				</div>
 
 				<div class="input-container">
 					<i class="fa fa-key icon"></i>
 						<input class="input-field" type="password" placeholder="Repeat password" 
-							name="rpswd-repeat" id="pswd-repeat" pattern=".{8,}" required>
+							   name="rpswd-repeat" id="pswd-repeat" pattern=".{8,}" required>
 				</div>
 
 				<p id="terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
@@ -101,7 +103,7 @@
 					</button>
 					<span class="psw">Already registered? 
 						<a href="#" onclick="document.getElementById('registerform').style.display='none'; 
-							document.getElementById('loginform').style.display='block';">Sign in</a>.
+											 document.getElementById('loginform').style.display='block';">Sign in</a>.
 					</span>
 				</div>
 
@@ -109,7 +111,7 @@
 			
 		</section>
 
-<!-- LOGIN-FORM-SECTION -->
+<!-- LOGIN-FORM-SECTION ============================================================================================ -->
 
 		<section id="loginform">
 					
@@ -137,7 +139,7 @@
 					<div style="display:flex;">
 						<span class="fa fa-user icon" style="background-color: #4CAF50;"></span>
 							<input class="input-field" type="text" placeholder="Username" 
-								name="luname" id="luname" required>
+								   name="luname" id="luname" required>
 					</div>
 
 					<label for="lpswd"><b>Password</b></label>
@@ -145,7 +147,7 @@
 					<div style="display:flex;">
 						<span class="fa fa-key icon" style="background-color: #4CAF50;"></span>
 							<input class="input-field" type="password" placeholder="Password" 
-								name="lpswd" id="lpswd" pattern=".{8,}" required>
+								   name="lpswd" id="lpswd" pattern=".{8,}" required>
 					</div>
 
 					<button class="loginbtn" type="submit">Login</button>
@@ -178,7 +180,7 @@
 			
 		</section>
 		
-<!-- FORGOT-FORM-SECTION -->
+<!-- FORGOT-FORM-SECTION ============================================================================================ -->
 		
 		<section id="forgotform">
 		
@@ -225,6 +227,8 @@
 		
 		<br>
 		
+<!-- MAIN PRIVACY-POLICY ============================================================================================ -->
+		
 		<main class="main">
 
 			<h2>Privacy Policy</h2>
@@ -258,7 +262,7 @@
 
 		</main>
 		
-<!-- FOOTER-NAVIGATION -->
+<!-- FOOTER-NAVIGATION ============================================================================================ -->
 
 		<footer id="footernav">
 			<ul>			

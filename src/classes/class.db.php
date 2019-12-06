@@ -1,4 +1,5 @@
 <?php
+
 class Db{
 	
 	private $options;
@@ -6,6 +7,8 @@ class Db{
 	private $sql;
 	private $statement;
 	private $data;
+
+// === CONSTRUCTER =============================================================================================
 	
 	function __construct($dbms, $host, $port, $dbname, $username, $password) {
 		$this -> options = [ PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -18,7 +21,7 @@ class Db{
 		$this -> db -> query('SET NAMES utf8');
 	}
 
-// === USER-DB-FUNCTIONS ===
+// === USER-DB-FUNCTIONS =======================================================================================
 	
 	function selectDb($selection, $where){
 		$this -> sql = 'SELECT ' . $selection . ' FROM qf1x_users ' . $where;
@@ -46,10 +49,10 @@ class Db{
 		$this -> statement -> execute();
 	}
 	
-// === BLOG-DB-FUNCTIONS ===
+// === BLOG-DB-FUNCTIONS =======================================================================================
 	
 	function selectDbBlog(){
-		$this -> sql = 'SELECT * FROM qf1x_blog JOIN qf1x_users ON uid = author ORDER BY created DESC;';
+		$this -> sql = 'SELECT * FROM qf1x_blog JOIN qf1x_users ON uid = author ORDER BY bid DESC;';
 		$this -> statement = $this -> db -> prepare($this -> sql);
 		$this -> statement -> execute();
 		$this -> data = $this -> statement -> fetchAll();
@@ -61,12 +64,6 @@ class Db{
 		$this -> statement = $this -> db -> prepare($this -> sql);
 		$this -> statement -> execute();
 	}
-
-	// function updateDb($selection, $update, $user){
-		// $this -> sql = 'UPDATE qf1x_users SET ' . $selection . '= "' . $update . '" WHERE uname = "' . $user . '"';
-		// $this -> statement = $this -> db -> prepare($this -> sql);
-		// $this -> statement -> execute();
-	// }
 	
 	function deleteDbBlog($uid){
 		$this -> sql = 'DELETE FROM qf1x_blog WHERE author = "' . $uid . '"';

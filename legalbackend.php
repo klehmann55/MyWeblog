@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 	<head>
 		<meta charset="UTF-8">
 		<title>Legal Disclosure</title>
@@ -8,10 +9,12 @@
 		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
 		<link rel="stylesheet" type="text/css" href="src/fontawesome/css/all.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
-		<!-- <script src="js/javascript.js"></script> -->
 	</head>
-	<body>
 	
+	<body>
+
+<!-- TOP-NAVIGATION ============================================================================================ -->	
+
 		<nav id="topnav">
 			<ul>
 				<li>
@@ -30,6 +33,8 @@
 		</nav>
 		
 		<br>
+		
+<!-- MAIN LEGAL-DISCLOSURE ============================================================================================ -->
 		
 		<main class="main">
 			<h2>Legal Disclosure</h1>
@@ -74,7 +79,7 @@
 			</p>
 		</main>
 		
-<!-- FOOTER-NAVIGATION -->
+<!-- FOOTER-NAVIGATION ============================================================================================ -->
 
 		<footer id="footernav">
 			<ul>			

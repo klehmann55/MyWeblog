@@ -1,14 +1,21 @@
 <?php
-	require('src/classes/class.user.php');
+
+// REQUIRE =====================================================================================================
+
 	require('src/classes/class.db.php');
 	require('src/includes/dbparms.php');
+	
+// DB-CONNECTION & SELECTION ===================================================================================
 	
 	$db = new Db($dbms, $host, $port, $dbname, $username, $password);
 	$sel = $db->selectDb('fname, lname, uname, email, pswd', 'WHERE uname="' . $_COOKIE['uname'] . '"');
 ?>
 
+<!-- HTML ====================================================================================================== -->
+
 <!DOCTYPE html>
 <html lang="de">
+
 	<head>
 		<meta charset="UTF-8">
 		<title>Contact US</title>
@@ -19,7 +26,10 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
 		<!-- <script src="js/javascript.js"></script> -->
 	</head>
+	
 	<body>
+	
+<!-- TOP-NAVIGATION ============================================================================================ -->
 	
 		<nav id="topnav">
 			<ul>
@@ -40,10 +50,13 @@
 		
 		<br>
 		
+<!-- MAIN CONTACT-FORM ============================================================================================ -->
+		
 		<main id="contact-main">
+		
 			<h2>Contact:</h2>
-			<p>You need help or just want to give a feedback?</p>
-			<p>Write us here:</p>
+			<p>You need help or just want to give a feedback?<br>
+			Write us here:</p>
 		
 			<div id="contactform">
 				<form action="mailto:lehmann.kevin@outlook.de" method="post" enctype="text/plain">
@@ -75,9 +88,10 @@
 					</p>
 				</form>
 			</div>
+			
 		</main>
 		
-<!-- FOOTER-NAVIGATION -->
+<!-- FOOTER-NAVIGATION ============================================================================================ -->
 
 		<footer id="footernav">
 			<ul>			

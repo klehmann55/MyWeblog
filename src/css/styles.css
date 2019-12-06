@@ -1,22 +1,21 @@
-/* === COLORS === */
+/* === COLORS ======================================================================= */
 /*
-	Black w/ opacity	rgba(0,0,0,0.4)
-	Border-color		#888
-	icon-bg				dodgerblue
-	????				lightgreen
-	form-bg-color		beige
-	.loginbtn			#4CAF50
-	.cancelbtn			#f44336
+	modal Black w/ opacity	rgba(0,0,0,0.4)
 	
-	Udemy-Project:
-	Blau				#1F4E8C
-	Dunkel Grau			#3D3F45
-	Hell Grau			#E5E5E5
-	Rot					#A62C21
+	Black					#FFF
+	White					#000
 	
+	.loginbtn green			#4CAF50
+	.cancelbtn red			#f44336
+	
+	Dark Grey				#3D3F45
+	Light Grey				#E5E5E5
+	
+	Red						red
+	Blue					dodgerblue	
 */
 
-/* === HTML-TAGS === */
+/* === HTML-TAGS ======================================================================= */
 
 	* {
 		box-sizing: 		border-box;
@@ -38,7 +37,7 @@
 	}
 	
 
-/* === SINGLE ID'S AND CLASSES === */
+/* === SINGLE ID'S AND CLASSES ======================================================================= */
 	
 	.active {
 		background-color: 	#E5E5E5;
@@ -52,9 +51,6 @@
 	
 	.main {
 		text-align: 		left;
-		/* padding-left: 		.5rem; */
-		/* margin-top:			3rem;
-		margin-bottom: 		3rem; */
 		z-index:			0;
 		width: 				50%;
 		margin: 			3% auto;
@@ -74,12 +70,13 @@
 		text-align:			center;
 		z-index:			0;
 	}
+	
+	#index-main table {
+		margin: 			0 auto 0 auto;
+	}
 
 	#contact-main {
 		text-align: 		center;
-		/* padding-left: 		.5rem; */
-		/* margin-top:			3rem;
-		margin-bottom: 		3rem; */
 		z-index:			0;
 		width: 				50%;
 		margin: 			3% auto;
@@ -107,30 +104,28 @@
 		margin-bottom: 		0.5rem;
 	}
 
-	label#labelremember {
-		padding-left:			42%;
+	#labelremember {
+		padding-left:		42%;
 	}
 	
 	/* The "Forgot password" text */
 	p.psw {
-		/* float: 				right; */
-		/* padding-top: 		16px; */
-		/* padding-left: 		10px; */
-		text-align:				center;
+		text-align:			center;
 	}
 
 	hr {
-		margin-bottom: 			0;
+		margin-bottom: 		0;
 	}
 	table {
-		padding:				1rem;
+		padding:			1rem;
 	}
 	td {
-		padding-right:				1rem;
+		padding-right:		1rem;
+		vertical-align: 	top;
 	}
 
 
-/* === TOP-NAVIGATION === */
+/* === TOP-NAVIGATION ======================================================================= */
 
 	#topnav {
 		z-index: 			10;
@@ -168,11 +163,9 @@
 	#topnav > ul > li > a:active {
 		background-color: 	#E5E5E5;
 	}
-	/* #topnav > ul > li > a:visited { */
-		/* color: 				#FFF; */
-	/* } */
+
 	
-/* === FOOTER-NAVIGATION === */
+/* === FOOTER-NAVIGATION ======================================================================= */
 
 	#footernav {
 		z-index: 			10;
@@ -210,11 +203,9 @@
 	#footernav > ul > li > a:active {
 		background-color: 	#E5E5E5;
 	}
-	/* #footernav > ul > li > a:visited { */
-		/* color: 				#FFF; */
-	/* } */
+
 	
-/* === HEADER-BANNER === */
+/* === HEADER-BANNER ======================================================================= */
 	
 	.header-banner {
 		background: url("../images/headerblog.jpg") no-repeat;
@@ -240,19 +231,19 @@
 		position: relative;
 		z-index: 0;
 	}
+			/*
+			Größe des Bildes:
+			1920px x 400px
 
-/*
-Größe des Bildes:
-1920px x 400px
+			1000px x ????? (208.3px)
 
-1000px x ????? (208.3px)
+			Wie viel % von 1920px sind 400px?
 
-Wie viel % von 1920px sind 400px?
+			400 / 1920 * 100 = 20.83%
+			*/
 
-400 / 1920 * 100 = 20.83%
-*/
 
-/* === MODAL === */
+/* === MODAL ======================================================================= */
 
 	#modal {
 		display: 			none;
@@ -284,7 +275,7 @@ Wie viel % von 1920px sind 400px?
 		text-decoration:	underline;
 	}
 
-/* === CLOSE-MODAL-BUTTON === */
+/* === CLOSE-MODAL-BUTTON ======================================= */
 
 	.close {
 	  /* Position it in the top right corner of the forms */
@@ -302,19 +293,17 @@ Wie viel % von 1920px sind 400px?
 	  cursor: 				pointer;
 	}
 	
-/* === DELETE-POST-BUTTON === */
+/* === DELETE-POST-BUTTON ======================================================================= */
 
 	.del-post,
 	.del-post:visited {
 	  /* Position it in the top right corner outside of the modal */
 	  position: 			absolute;
-	  right: 				30em;
-	  /* top: 					-10px; */
+	  right: 				30rem;
 	  color: 				dodgerblue;
 	  font-size: 			1rem;
 	  font-weight: 			bold;
 	  text-decoration:		none;
-	  /* z-index: 				4; */
 	}
 	.del-post:hover,
 	.del-post:focus,
@@ -323,7 +312,7 @@ Wie viel % von 1920px sind 400px?
 	  cursor: 				pointer;
 	}
 
-/* === ANIMATION === */
+/* === ANIMATION ======================================================================= */
 
 	@keyframes myFadeIn {
 		from {
@@ -335,7 +324,7 @@ Wie viel % von 1920px sind 400px?
 	}
 
 
-/* === DIV-CONTAINER === */
+/* === DIV-CONTAINER ======================================================================= */
  
 	.input-container {
 		display: 			flex;
@@ -344,9 +333,7 @@ Wie viel % von 1920px sind 400px?
 	}
 	
 	.input-container-account {
-	  	/* display: 		flex; */
 	  	width: 				100%;
-	  	/* min-width: 			300px; */
 	  	margin-bottom: 		15px;
 	}
 	
@@ -366,16 +353,14 @@ Wie viel % von 1920px sind 400px?
 	}
 
 
-/* === FORM === */
+/* === FORM ======================================================================= */
  
 	form {
-		/* border: 			3px solid #f1f1f1; */
-		/* border: 			3px solid #3D3F45; */
 		padding: 			1.5em;
 		background-color:	#E5E5E5;
 	}
 
-/* === FORM-FIELDS === */
+/* === FORM-FIELDS ================================================== */
 
 	.input-field {
 		width: 				100%;
@@ -394,6 +379,31 @@ Wie viel % von 1920px sind 400px?
 		position:			relative;
 	}
 
+	#registerform-home {
+		z-index: 			2;
+		position: 			absolute; /* important for z-index */
+		width:				100%;
+		min-width:			50rem;
+		height:				80%;
+		margin-top:			2rem;
+	}
+	#loginform-home {
+		z-index: 			3;
+		position: 			absolute; /* important for z-index */
+		width:				100%;
+		min-width:			50rem;
+		height:				80%;
+		margin-top:			2rem;
+	}
+	#forgotform-home {
+		z-index: 			4;
+		position: 			absolute; /* important for z-index */
+		width:				100%;
+		min-width:			50rem;
+		height:				80%;
+		margin-top:			2rem;
+	}
+	
 	#registerform {
 		z-index: 			2;
 		position: 			absolute; /* important for z-index */
@@ -419,11 +429,8 @@ Wie viel % von 1920px sind 400px?
 		margin-top:			2rem;
 	}
 
-	/* #contactform {
-		text-align:			center;
-	} */
 
-/* === FORM-BUTTONS === */
+/* === FORM-BUTTONS ================================================== */
 
 	button {
 		color: 				white;
@@ -457,13 +464,11 @@ Wie viel % von 1920px sind 400px?
 	
 	.cancelbtn {
 		width: 				100%;
-		/* padding: 			10px 18px; */
 		background-color: 	#f44336;
-		/* margin:				auto; */
 	}
 
 
-/* === AVATAR === */
+/* === AVATAR ======================================================================= */
  
 	.imgcontainer {
 	  text-align: 			center;
@@ -475,34 +480,99 @@ Wie viel % von 1920px sind 400px?
 	}
 
 
-/* === MEDIA-QUERY over VIEWPORT === */
+/* === MEDIA-QUERY over VIEWPORT ======================================================================= */
 
-	@media screen and (max-width: 375px) {
+	@media screen and (max-width: 1124px) {
+		.del-post {
+			position:			absolute;
+			right:				2rem;
+		}
+		
+		.main {
+			width:				95%;
+			margin-top:			2.5rem;
+			margin-bottom:		4rem;			
+		}
+	}
+
+	@media screen and (max-width: 800px) {
 		p.psw {
-			display: 		block;
-			float: 			none;
-			margin-left:	0;
-			text-align:		center;
+			display: 			block;
+			float: 				none;
+			margin-left:		0;
+			text-align:			center;
 		}
 		.cancelbtn {
-			width: 			100%;
+			width: 				100%;
 		}
 		.modal-content {
-			/* margin: 			1% auto auto auto; /* 5% from the top, 15% from the bottom and centered */
 			border: 			1px solid #888;
 			width: 				100%; /* Could be more or less, depending on screen size */
 			z-index:			3;
-			position: 			relative;
+			position: 			relative;	
 		}
+		
+		.main {
+			width:				95%;
+			margin-top:			2.5rem;
+			margin-bottom:		4rem;			
+		}
+		
+		#contact-main {
+			width:				95%;
+			margin-top:			2.5rem;
+			margin-bottom:		4rem;
+		}
+		
+		#registerform-home {
+			min-width:			0;
+			margin:				0;
+		}
+		#loginform-home {
+			min-width:			0;
+			margin:				0;
+		}
+		#forgotform-home {
+			min-width:			0;
+			margin:				0;
+		}
+		
 		#registerform {
 			min-width:			0;
-			text-align:			center;
+			margin-top:			2.5rem;
 		}
 		#loginform {
 			min-width:			0;
+			margin-top:			2.5rem;
 		}
 		#forgotform {
 			min-width:			0;
+			margin-top:			2.5rem;
+		}
+		
+		#labelremember {
+			padding-left:		40%;
+		}
+		
+		.del-post {
+			position: 			absolute;
+			right: 				1.5rem;
+
+		}
+	}
+
+/* 
+GALAXY S9/S9+ (width: 360px)
+IPHONE 6/7/8
+	
+	@media screen and (max-width: 414px) {
+		.del-post {
+			position: 			absolute;
+			right: 				1rem;
+		}
+		
+		#labelremember {
+			padding-left:		30%;
 		}
 	}
 
