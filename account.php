@@ -6,9 +6,12 @@
 		session_start();
 	}
 
-	require('src/classes/class.user.php');
+// REQUIRE ============================================================================================
+
 	require('src/classes/class.db.php');
 	require('src/includes/dbparms.php');
+	
+// DB-CONNECTION & SELECTION ==========================================================================
 
 	$db = new Db($dbms, $host, $port, $dbname, $username, $password);
 	$sel = $db->selectDb('fname, lname, uname, email, pswd', 'WHERE uname="' . $_COOKIE['uname'] . '"');
@@ -32,7 +35,7 @@
 	
 	<body>
 
-<!-- NAVIGATION ============================================================================================ -->
+<!-- NAVIGATION ======================================================================================= -->
 
 		<nav id="topnav">
 			<ul>
@@ -52,7 +55,7 @@
 		</nav>
 		<br>
 
-<!-- ACCOUNT-FORM ============================================================================================ -->		
+<!-- ACCOUNT-FORM ===================================================================================== -->		
 
 		<main class="main">
 			<form method="post" action="useracc.php">
@@ -99,7 +102,7 @@
 
 		</main>
 			
-<!-- ACCOUNT-DELETE-FORM ============================================================================================ -->
+<!-- ACCOUNT-DELETE-FORM ============================================================================== -->
 
 		<main class="main">
 
@@ -121,7 +124,7 @@
 			
 		</main>
 		
-<!-- FOOTER-NAVIGATION ============================================================================================ -->
+<!-- FOOTER-NAVIGATION ================================================================================ -->
 
 		<footer id="footernav">
 			<ul>			
@@ -140,31 +143,9 @@
 			</ul>
 		</footer>
 
-<!-- PHP+JS-ERRORMESSAGE ============================================================================================ -->		
+<!-- INCLUDE: PHP+JS FORMS-ERRORMESSAGE =============================================================== -->		
 
-<?php
-if ( isset($_SESSION['form']) ) { ?>
+		<?php require('src/includes/account-error.php'); ?>
 
-		<script>
-		
-			var myform = '<?= $_SESSION['form'] ?>';
-				
-				<?php
-				if ( isset($_SESSION['errormsg']) ) {
-					
-					foreach ( $_SESSION['errormsg'] as $key => $msg ) { ?>
-					
-						var field = document.getElementById('<?= $key ?>');
-						field.placeholder = '<?= $msg ?>';
-
-						field.setAttribute('style', 'color: red; border-color: red; background-color: #ef7e7e36;');
-						field.focus(); //@todo: Fokus auf das ERSTE 'Fehlerfeld'!
-					<?php }
-				} ?>
-			// }
-			
-		</script>
-		
-<?php } ?>
 	</body>
 </html>

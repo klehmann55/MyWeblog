@@ -1,3 +1,39 @@
+<!-- MODAL ===================================================================================================== -->
+	
+		<div id="modal"></div>
+
+<!-- TOP-NAVIGATION ============================================================================================ -->
+
+		<nav id="topnav">
+			<ul>
+				<li>
+					<a href="index.php" title="Home" id="ahome" class="active">Home</a>
+				</li>			
+				<li>
+					<a href="#"
+				       title="Register"
+					   id="aregisterform"
+					   class="right"
+					   onclick="document.getElementById('forgotform-home').style.display='none';
+								document.getElementById('loginform-home').style.display='none';
+								document.getElementById('modal').style.display='block';								
+								document.getElementById('registerform-home').style.display='block'; 
+								return false;">Register</a>
+				</li>
+				<li>
+					<a href="#"
+				       title="Login"
+					   id="aloginform"
+					   class="right"
+					   onclick="document.getElementById('forgotform-home').style.display='none';
+								document.getElementById('registerform-home').style.display='none';
+								document.getElementById('modal').style.display='block';
+								document.getElementById('loginform-home').style.display='block'; 
+								return false;">Login</a>
+				</li>
+			</ul>
+		</nav>
+
 <!-- REGISTER-FORM-SECTION ============================================================================================ -->
 		
 		<section id="registerform-home">
